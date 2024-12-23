@@ -1,0 +1,112 @@
+.mob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  height: 100%;
+  transition-duration: .4s;
+  visibility: hidden;
+  &-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 14, 14, 0.40);
+    transition-duration: .4s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__cont {
+    background-color: #F5F5F3;
+    padding-top: 67px;
+    transform: translateY(-100%);
+    transition-duration: .4s;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    li {
+      list-style: none;
+      padding: 15px 40px;
+      @media (max-width: 759px) {
+        padding: 15px 16px;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(31, 32, 35, 0.15)
+      }
+      a {
+        color: var(--primary-black-brown, #1F2023);
+        font-size: 12px;
+        font-family: 'Montserrat';
+        line-height: 150%;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .btn-red {
+    padding: 20px 40px;
+    justify-content: space-between;
+    @media (max-width: 759px) {
+      padding: 20px 16px;
+    }
+  }
+  &__bot {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__tels {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: var(--primary-black-brown, #1F2023);
+      font-size: 12px;
+      font-family: 'Montserrat';
+      line-height: 150%;
+      text-transform: uppercase;
+      &:not(:last-child) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+  &-email {
+    color: var(--primary-black-brown, #1F2023);
+    font-size: 12px;
+    font-family: 'Montserrat';
+    line-height: 150%;
+    margin-left: auto;
+  }
+  &__socials {
+    display: flex;
+    margin-top: 10px;
+    a {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--primary-dark-red-purple, #612848);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+  &.active {
+    visibility: visible;
+    .mob__cont {
+      transform: translateY(0);
+    }
+    .mob-bg {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

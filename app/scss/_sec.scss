@@ -1,0 +1,114 @@
+.sec {
+  padding: 150px 0 165px 0;
+  background: #612848;
+  @media (max-width: 1549px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 759px) {
+    padding: 60px 0;
+  }
+  &-title {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 130%;
+    /* or 65px */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+
+    /* Primary/Smoky White */
+
+    color: #F5F5F3;
+    max-width: 1370px;
+    margin-bottom: 90px;
+    @media (max-width: 1549px) {
+      font-size: 36px;
+      max-width: 1095px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 999px) {
+      font-size: 22px;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 759px) {
+      max-width: 100%;
+    }
+  }
+  &-border {
+    width: 100%;
+    height: 1px;
+    background: rgba(245, 245, 243, 0.3);
+    margin-bottom: 60px;
+    @media (max-width: 1549px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 999px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__bot {
+    display: grid;
+    grid-template-columns: 740fr 810fr;
+    grid-gap: 100px;
+    @media (max-width: 1549px) {
+      grid-gap: 143px;
+      grid-template-columns: 645fr 532fr;
+    }
+    @media (max-width: 1249px) {
+      grid-gap: 50px;
+    }
+    @media (max-width: 999px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+    @media (max-width: 759px) {
+      grid-template-columns: 1fr;
+    }
+    &-left {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 130%;
+      /* or 45px */
+
+      letter-spacing: 0.01em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+
+      /* Primary/Smoky White */
+
+      color: #F5F5F3;
+      @media (max-width: 1549px) {
+        font-size: 24px;
+      }
+      @media (max-width: 999px) {
+        font-size: 16px;
+      }
+    }
+    &-right {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      /* or 30px */
+
+      display: flex;
+      align-items: center;
+
+      /* Primary/Smoky White_90% */
+
+      color: rgba(245, 245, 243, 0.9);
+      @media (max-width: 1549px) {
+        font-size: 16px;
+      }
+      @media (max-width: 999px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

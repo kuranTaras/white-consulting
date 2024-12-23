@@ -1,0 +1,110 @@
+.number {
+  position: relative;
+  padding: 225px 0;
+  @media (max-width: 1549px) {
+    padding: 153px 0 ;
+  }
+  @media (max-width: 1249px) {
+    padding: 70px 0;
+  }
+  @media (max-width: 999px) {
+    padding: 110px 0;
+  }
+  @media (max-width: 759px) {
+    padding: 125px 0;
+  }
+  &-bg {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__items {
+    padding: 0 110px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 185px 210px;
+    @media (max-width: 1549px) {
+      padding: 0 60px;
+      grid-gap: 145px;
+    }
+    @media (max-width: 1249px) {
+      grid-gap: 70px;
+    }
+    @media (max-width: 999px) {
+      padding: 0 124px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 60px 104px;
+    }
+    @media (max-width: 759px) {
+      grid-gap: 60px 40px;
+      padding: 0;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 999px) {
+      align-items: center;
+    }
+    &:first-child, &:nth-child(4) {
+      @media (max-width: 1549px) {
+        padding: 0 30px;
+      }
+      @media (max-width: 999px) {
+        padding: 0;
+      }
+    }
+    &-num {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 95px;
+      line-height: 130%;
+      /* or 123px */
+
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.01em;
+      font-feature-settings: 'case' on;
+
+      /* Primary/Smoky White */
+
+      color: #F5F5F3;
+      @media (max-width: 1549px) {
+        font-size: 64px;
+      }
+      @media (max-width: 999px) {
+        font-size: 48px;
+      }
+      @media (max-width: 759px) {
+        font-size: 40px;
+      }
+    }
+    &-label {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      /* identical to box height, or 30px */
+
+      display: flex;
+      align-items: center;
+
+      /* Primary/Smoky White_90% */
+
+      color: rgba(245, 245, 243, 0.9);
+      margin-top: 5px;
+      @media (max-width: 1549px) {
+        font-size: 16px;
+      }
+      @media (max-width: 999px) {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+}

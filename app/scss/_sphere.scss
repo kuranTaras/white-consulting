@@ -1,0 +1,204 @@
+.sphere {
+  padding: 175px 0 190px 0;
+  display: flex;
+  @media (max-width: 1549px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 759px) {
+    padding: 60px 0;
+  }
+  .container {
+    margin: auto;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+    @media (max-width: 1549px) {
+      margin-bottom: 70px;
+    }
+    @media (max-width: 999px) {
+      max-width: 512px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 759px) {
+      margin-bottom: 30px;
+      max-width: 100%;
+      align-items: normal;
+    }
+  }
+  &-title {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 130%;
+    /* or 65px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    /* Primary/Dark Red-Purple */
+
+    color: #612848;
+    @media (max-width: 1549px) {
+      font-size: 36px;
+    }
+    @media (max-width: 999px) {
+      font-size: 22px;
+    }
+    @media (max-width: 759px) {
+      align-items: normal;
+      text-align: left;
+    }
+  }
+  &-p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Primary/Black Brown */
+
+    color: #1F2023;
+    margin: 30px 0 20px 0;
+    max-width: 1430px;
+    @media (max-width: 1549px) {
+      font-size: 16px;
+      max-width: 876px;
+    }
+    @media (max-width: 999px) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+  &-sub {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Primary/Black Brown */
+
+    color: #1F2023;
+    @media (max-width: 1549px) {
+      font-size: 16px;
+    }
+    @media (max-width: 999px) {
+      font-size: 14px;
+    }
+  }
+  &__slider {
+    width: 100%;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: 375fr 450fr 450fr 375fr;
+
+    @media (max-width: 1549px) {
+      grid-template-columns: 320fr 340fr 340fr 320fr;
+    }
+    @media (max-width: 999px) {
+      //grid-gap: 16px;
+      //overflow: auto;
+      padding-bottom: 25px;
+    }
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(31, 32, 35, 0.15);
+      border-radius: 4px;
+      border: 1px solid #F5F5F3
+    }
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #612848 0%, #952865 100%);
+      border-radius: 4px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      padding-right: 75px;
+      border-right: 1px solid rgba(31, 33, 35, 0.3);
+      @media (max-width: 1549px) {
+        padding-right: 20px;
+      }
+      @media (max-width: 999px) {
+        border-right: none;
+        padding-right: 0;
+      }
+      @media (max-width: 759px) {
+        padding-right: 45px;
+      }
+    }
+    &:not(:first-child) {
+      padding-left: 75px;
+      @media (max-width: 1549px) {
+        padding-left: 20px;
+      }
+      @media (max-width: 999px) {
+        padding-left: 0;
+      }
+    }
+    svg {
+      @media (max-width: 1249px) {
+        width: 40px;
+        height: 36px;
+      }
+      @media (max-width: 999px) {
+        width: 56px;
+        height: 40px;
+      }
+    }
+    p {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      /* or 30px */
+
+      display: flex;
+      align-items: center;
+
+      /* Primary/Black Brown_90% */
+
+      color: rgba(31, 33, 35, 0.9);
+      margin-top: 15px;
+      margin-left: 50px;
+      margin-bottom: 10px;
+      @media (max-width: 1549px) {
+        font-size: 16px;
+      }
+      @media (max-width: 1249px) {
+        margin-left: 30px;
+        font-size: 12px;
+      }
+      @media (max-width: 999px) {
+        font-size: 14px;
+        margin-left: 50px;
+      }
+    }
+  }
+}
